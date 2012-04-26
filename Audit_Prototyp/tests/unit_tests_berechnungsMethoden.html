@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+        <script>
+
+// Grundfunktionen die zur Berechnung des Audits gebraucht werden Funktionen.
+var Audit = {
+	// Erwartet als Argument das Prüfungskriterium das Bewertet wurde sowie die Bewertung
+    PK_Bewerten : function(pk, bewertung)
+	{
+    	pk.PK_Bewertung = bewertung;
+        //this.PK_Resultat_Berechnen(pk);
+    },    	
+    // Erwartet als Argument das Prüfungkriterium dessen Resultate berechnet werden sollen
+    PK_Resultat_Berechnen : function(pk)
+    {
+		pk.Attribut_Resultat.C = pk.Attribut_Konsequenz.C * pk.PK_Gewichtung * pk.PK_Bewertung;
+       	pk.Attribut_Resultat.I = pk.Attribut_Konsequenz.I * pk.PK_Gewichtung * pk.PK_Bewertung;
+      	pk.Attribut_Resultat.A = pk.Attribut_Konsequenz.A * pk.PK_Gewichtung * pk.PK_Bewertung;
+	},
+	
+	// Erwartet als Argument einen Sicherheitsapsekt und berechnet die Attribut-Erfüllung
+    Aspekt_Resultat_Berechnen : function(sa)
+    {
+    	for(var pk_nr in sa.Prüfungskriterium) {
+    		var pk = sa.Prüfungskriterium[pk_nr];
+        	
+    		if(pk.Relevant)
+    		{
+        		sa.Max_Sum.C += pk.Attribut_Konsequenz.C * pk.PK_Gewichtung;
+    			sa.Max_Sum.I += pk.Attribut_Konsequenz.I * pk.PK_Gewichtung;
+        		sa.Max_Sum.A += pk.Attribut_Konsequenz.A * pk.PK_Gewichtung;
+        		
+        		sa.Aspekt_Resultat.C += pk.Attribut_Resultat.C
+        		sa.Aspekt_Resultat.I += pk.Attribut_Resultat.I
+        		sa.Aspekt_Resultat.A += pk.Attribut_Resultat.A
+        	}
+        	
+        }
+        
+    	// Berechnung der eigentlichen Erfüllung des Sicherheitsaspektes
+    	sa.SA_Erfuellung.C = sa.Aspekt_Resultat.C / sa.Max_Sum.C;
+    	sa.SA_Erfuellung.I = sa.Aspekt_Resultat.I / sa.Max_Sum.I;
+    	sa.SA_Erfuellung.A = sa.Aspekt_Resultat.A / sa.Max_Sum.A;
+    },
+        	
+        	// Erwartet als Aspekt alle Sicherheitsaspekte und berechnet die End-Bewertung des Audits
+    Audit_Auswerten : function(sicherheitsaspekte)
+    {
+		for(var i in sicherheitsaspekte)
+    	{
+    		var sa = sicherheitsaspekte[i];
+    		
+    		Audit_Data.Max_Sum.C	+= sa.Max_Sum.C;
+    		Audit_Data.Max_Sum.I	+= sa.Max_Sum.I;
+    		Audit_Data.Max_Sum.A	+= sa.Max_Sum.A;    		
+    			
+    		Audit_Data.Resultat.C 	+= sa.Aspekt_Resultat.C;
+    		Audit_Data.Resultat.I 	+= sa.Aspekt_Resultat.I;
+    		Audit_Data.Resultat.A	+= sa.Aspekt_Resultat.A;
+    	}
+    	
+    	Audit_Data.Erfuellung.C = (Audit_Data.Resultat.C / Audit_Data.Max_Sum.C) * Audit_Data.Attribut_Gewichtung.C;
+    	Audit_Data.Erfuellung.I = (Audit_Data.Resultat.I / Audit_Data.Max_Sum.I) * Audit_Data.Attribut_Gewichtung.I;
+    	Audit_Data.Erfuellung.A = (Audit_Data.Resultat.A / Audit_Data.Max_Sum.A) * Audit_Data.Attribut_Gewichtung.A;
+        		
+    	var Audit = Audit_Data.Erfuellung;
+    	Audit.Total = Audit.C + Audit.I + Audit.A;
+    }
+}
+
+/* Test-Modell mit welchem die Tests durchgeführt werden
+ * Die Zahlenwerte die berechnet werden, werden auch in der bereits implementierten Excel-Version durchgeführt. 
+ * Die Resultate der Excel- und der JS-Implementierung müssen übereinstimmen.
+ */
+	var Audit_Data = {
+            Attribut_Gewichtung: {C: 4, I : 3 , A: 2},
+            
+            Sicherheitsaspekt: [
+                // 1. Sicherheitsaspekt
+                {
+                    Name: "Sicherheitsaspekt 1",
+                    Aspekt_Resultat : 
+                        {
+                            C : 0,
+                            I : 0,
+                            A : 0,
+                            Total: 0
+                        },
+                    
+                    // Die maximal Summe der jeweiligen Attribute (nur relevante)
+                    Max_Sum:
+                    	{
+                    		C : 0,
+                    		I : 0,
+                    		A : 0,
+                    		Total : 0
+                    	},
+                    	
+                    // Beschreibt den Erfüllungsgrad der einzelnen Attribute
+                    // Ergibt sich aus Aspekt_Resultat / Max_Sum
+                    SA_Erfuellung:
+                    	{
+                    		C : 0,
+                    		I : 0,
+                    		A : 0,
+                    		Total : 0
+                    	},
+                    
+                    // Prüfungskriterien
+                    Prüfungskriterium : [
+                        // 1. Prüfungskriterium Sicherheitsaspekt 1
+                        {
+                            Name: "Prüfungskriterium 1",
+                            
+                            Relevant : true,
+                            
+                            Attribut_Konsequenz :
+                            {
+                                C : 0.8,
+                                I : 0.4,
+                                A : 0.4
+                            },
+                            
+                            PK_Gewichtung: 1,
+                            
+                            PK_Bewertung : 1,
+                            
+                            Attribut_Resultat : 
+                            {
+                                C : 0.8,
+                                I : 0.4,
+                                A : 0.4
+                            }                          
+                        },
+                        // 2. Prüfungskriterium Sicherheitsaspekt 1
+                        {
+                            Name: "Prüfungskriterium 2",
+                            
+                            Relevant : true,
+                            
+                            Attribut_Konsequenz :
+                            {
+                                C : 0,
+                                I : 0.5,
+                                A : 0
+                            },
+                            
+                            PK_Gewichtung: 1,
+                            
+                            PK_Bewertung : 1,
+                            
+                            Attribut_Resultat : 
+                            {
+                                C : 0,
+                                I : 0.5,
+                                A : 0
+                            }                            
+                        },
+                        // 3. Prüfungskriterium Sicherheitsaspekt 1
+                        {
+                            Name: "Prüfungskriterium 3",
+                            
+                            Relevant : true,
+                            
+                            Attribut_Konsequenz :
+                            {
+                                C : 0.6,
+                                I : 0.4,
+                                A : 0
+                            },
+                            
+                            PK_Gewichtung: 0.5,
+                            
+                            PK_Bewertung : 0.5,
+                            
+                            Attribut_Resultat : 
+                            {
+                                C : 0.15,
+                                I : 0.1,
+                                A : 0
+                            }                            
+                        },
+                        // 4. Prüfungskriterium Sicherheitsaspekt 1
+                        {
+                            Name: "Prüfungskriterium 4",
+                            
+                            Relevant : true,
+                            
+                            Attribut_Konsequenz :
+                            {
+                                C : 0,
+                                I : 0.4,
+                                A : 0.6
+                            },
+                            
+                            PK_Gewichtung: 0.5,
+                            
+                            PK_Bewertung : 1,
+                            
+                            Attribut_Resultat : 
+                            {
+                                C : 0,
+                                I : 0.2,
+                                A : 0.3
+                            }                            
+                        },
+                        // 5. Prüfungskriterium Sicherheitsaspekt 1
+                        {
+                            Name: "Prüfungskriterium 5",
+                            
+                            Relevant : true,
+                            
+                            Attribut_Konsequenz :
+                            {
+                                C : 0,
+                                I : 0.4,
+                                A : 0.6
+                            },
+                            
+                            PK_Gewichtung: 0.25,
+                            
+                            PK_Bewertung : 1,
+                            
+                            Attribut_Resultat : 
+                            {
+                                C : 0,
+                                I : 0.1,
+                                A : 0.15
+                            }                            
+                        }
+                        
+                    ]
+                },
+                // 2. Sicherheitsaspekt
+                {
+                    Name: "Sicherheitsaspekt 2",
+                    Aspekt_Resultat : 
+                        {
+                            C : 0,
+                            I : 0,
+                            A : 0,
+                            Total: 0
+                        },
+                    
+                    // Die maximal Summe der jeweiligen Attribute (nur relevante)
+                    Max_Sum:
+                    	{
+                    		C : 0,
+                    		I : 0,
+                    		A : 0,
+                    		Total : 0
+                    	},
+                    	
+                    // Beschreibt den Erfüllungsgrad der einzelnen Attribute
+                    // Ergibt sich aus Aspekt_Resultat / Max_Sum
+                    SA_Erfuellung:
+                    	{
+                    		C : 0,
+                    		I : 0,
+                    		A : 0,
+                    		Total : 0
+                    	},
+                    // Prüfungskriterien
+                    Prüfungskriterium : [
+                        // 1. Prüfungskriterium Sicherheitsaspekt 2
+                        {
+                            Name: "Prüfungskriterium 1",
+                            
+                            Relevant : true,
+                            
+                            Attribut_Konsequenz :
+                            {
+                                C : 0.7,
+                                I : 0,
+                                A : 0
+                            },
+                            
+                            PK_Gewichtung: 1,
+                            
+                            PK_Bewertung : 1,
+                            
+                            Attribut_Resultat : 
+                            {
+                                C : 0.7,
+                                I : 0,
+                                A : 0
+                            }                            
+                        },
+                        // 2. Prüfungskriterium Sicherheitsaspekt 2
+                        {
+                            Name: "Prüfungskriterium 2",
+                            
+                            Relevant : true,
+                            
+                            Attribut_Konsequenz :
+                            {
+                                C : 0,
+                                I : 0.8,
+                                A : 0.4
+                            },
+                            
+                            PK_Gewichtung: 0.5,
+                            
+                            PK_Bewertung : 1,
+                            
+                            Attribut_Resultat : 
+                            {
+                                C : 0,
+                                I : 0.2,
+                                A : 0.1
+                            }                            
+                        },
+                        // 3. Prüfungskriterium Sicherheitsaspekt 3
+                        {
+                            Name: "Prüfungskriterium 3",
+                            
+                            Relevant : false,
+                            
+                            Attribut_Konsequenz :
+                            {
+                                C : 0.4,
+                                I : 0.5,
+                                A : 0.5
+                            },
+                            
+                            PK_Gewichtung: 0.5,
+                            
+                            PK_Bewertung : 1,
+                            
+                            Attribut_Resultat : 
+                            {
+                                C : 0.2,
+                                I : 0.25,
+                                A : 0.25
+                            }                            
+                        },
+                        // 4. Prüfungskriterium Sicherheitsaspekt 4
+                        {
+                            Name: "Prüfungskriterium 4",
+                            
+                            Relevant : true,
+                            
+                            Attribut_Konsequenz :
+                            {
+                                C : 0,
+                                I : 0,
+                                A : 0.8
+                            },
+                            
+                            PK_Gewichtung: 0.25,
+                            
+                            PK_Bewertung : 1,
+                            
+                            Attribut_Resultat : 
+                            {
+                                C : 0,
+                                I : 0,
+                                A : 0.2
+                            }                            
+                        },
+                        // 5. Prüfungskriterium Sicherheitsaspekt 5
+                        {
+                            Name: "Prüfungskriterium 5",
+                            
+                            Relevant : true,
+                            
+                            Attribut_Konsequenz :
+                            {
+                                C : 0,
+                                I : 0.6,
+                                A : 0.4
+                            },
+                            
+                            PK_Gewichtung: 0.25,
+                            
+                            PK_Bewertung : 1,
+                            
+                            Attribut_Resultat : 
+                            {
+                                C : 0,
+                                I : 0.15,
+                                A : 0.1
+                            }                            
+                        }
+                    ]
+                }
+            ],     
+            
+             Max_Sum:
+            {
+            	C : 0,
+            	I : 0,
+            	A : 0,
+            Total : 0
+            },
+            
+            Resultat: 
+            {
+            	C:0,
+            	I:0,
+            	A:0,
+            Total:0
+            },
+            
+            Erfuellung:
+            {
+            	C:0,
+            	I:0,
+            	A:0,
+            Total:0
+        }
+}
+
+// Test 1
+// Methode: PK_Bewertet
+/* Erwartetes Resultat
+ * Die PK_Bewertung-Wert des PKs wird auf 0.7 gesetzt
+ */
+        var pk = Audit_Data.Sicherheitsaspekt[0].Prüfungskriterium[0];
+        Audit.PK_Bewerten(pk,0.7);
+        if(Audit_Data.Sicherheitsaspekt[0].Prüfungskriterium[0].PK_Bewertung == 0.7)
+        {
+        	document.write("PK_Bewerten()-Test erfolgreich");
+        }else
+        {
+        	document.write("PK_Bewerten()-Test fehlgeschlagen");
+        }
+        
+// Zurücksetzen des Test-Objektes
+pk.PK_Bewertung = 1;
+
+document.write("<br>");
+        
+// Test 2
+// Methode: PK_Resultat_Berechnen
+/* Erwartetes Resultat
+ * Das PK hat folgende Werte: PK_Gewichtung = 1, PK_Bewertung = 1, C = 0.8, I = 0.4, A = 0.4
+ * Das Resultat jedes Attributes setzt sich laut Methodendefinition wie folgt zusammen:
+ * Res = PK_Gewichtung * PK_Bewertung * Attribut_Wert (z.B: A)
+ * Als Resultate werden deshalb erwartet: C = 0.8, I = 0.4, A = 0.4
+ */
+        var pk = Audit_Data.Sicherheitsaspekt[0].Prüfungskriterium[0];
+        var res = pk.Attribut_Resultat;
+        
+        Audit.PK_Resultat_Berechnen(pk);
+        
+        if(res.C == 0.8 && res.I == 0.4 && res.A == 0.4)
+        {
+        	document.write("PK_Resultat_Berechnen()-Test erfolgreich");
+        }else
+        {
+        	document.write("PK_Resultat_Berechnen()-Test fehlgeschlagen");
+        }
+
+// Test 3
+// Methode: Aspekt_Resultat_Berechnen
+/* Erwartetet Resultat
+ * Der Methode wird der zweite Sicherheitsaspekt der Test-Modells übergeben. 
+ * Das zweite PK wurde akzeptabel bewertet und das dritte PK als nicht relevant
+ * Der Erfüllungsgrad der Attribute sollte schlussendlich c:1, i:0.64 und a:0.8 sein (auf 2 dezimalstellen gerundet)
+ */    
+document.write("<br>");
+
+    	var sa = Audit_Data.Sicherheitsaspekt[1];
+    	
+    	Audit.Aspekt_Resultat_Berechnen(sa);
+    	
+    	// Sicherstellen, das I auf 2 Stellen gerundet ist
+    	var res_I = Math.round(sa.SA_Erfuellung.I*100)/100;
+		
+		if(sa.SA_Erfuellung.C == 1 && res_I == 0.64 && sa.SA_Erfuellung.A == 0.8)
+        {
+        	document.write("Aspekt_Resultat_Berechnen()-Test erfolgreich");
+        }else
+        {
+        	document.write("Aspekt_Resultat_Berechnen()-Test fehlgeschlagen");
+        }
+
+// Test 4
+// Methode: Audit_Auswerten
+/* Erwartetes Resultat: C = 3.67, I = 2.54, A = 1.85, Total = 8.06
+ *
+ */
+document.write("<br>");
+
+	var sicherheitsaspekte = Audit_Data.Sicherheitsaspekt;
+	
+	Audit.Aspekt_Resultat_Berechnen(sicherheitsaspekte[0]);
+	
+	Audit.Audit_Auswerten(sicherheitsaspekte);
+	
+	// Zum Test: Runden der Resultate auf 2 Kommastellen
+	var resC = Math.round(Audit_Data.Erfuellung.C * 100) / 100;
+	var resI = Math.round(Audit_Data.Erfuellung.I * 100) / 100;
+	var resA = Math.round(Audit_Data.Erfuellung.A * 100) / 100;
+    var resTot = Math.round(Audit_Data.Erfuellung.Total * 100) / 100; 
+	
+	if(resC == 3.67 && resI == 2.54 && resA == 1.85 && resTot == 8.06)
+    {
+       	document.write("Audit_Auswerten()-Test erfolgreich");
+    }else
+    {
+       	document.write("Audit_Auswerten()-Test fehlgeschlagen");
+    }
+        
+    </script>
+    </head>
+    <body>
+    </body>
+</html>
