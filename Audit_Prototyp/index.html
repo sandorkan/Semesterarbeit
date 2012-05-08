@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Audit Index</title>
+        <link type="text/css" href="css/index.css" rel="Stylesheet" />
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script src="js/audit_data.js"></script></script>
+		<script src="js/audit_index.js"></script>
+    </head>
+    <body
+	<div id="main">
+	<h1 id="title">Audit</h1>
+	<br>
+	<div id="schutzZielContainer">
+	<h2 id="schutzzielTitle">Schutzziel-Definition</h2>
+	<p>Geben Sie hier, je nach dem, wie wichtig Ihnen eines dieser Attribute ist, jeweils einen Wert zwischen 1-10 ein.</p>
+	<table id="schutzziele">
+	<tr>
+		<td>Vertraulichkeit:</td>
+		<td><input type="text" id="vertraulichkeit" title="C" size="10"></td>
+
+		<td>Integrität:</td>
+		<td><input type="text" id="integrität" title="I" size="10"></td>
+
+		<td>Verfügbarkeit:</td>
+		<td><input type="text" id="verfügbarkeit" title="A" size="10"></td>
+	</tr>
+	</table>
+	</div>
+	<hr>
+	<div id="personalDataContainer">
+	<h2 id="personalDataTitle">Persönliche Daten</h2>
+	<table id="personalData">
+	<tr>
+		<td>Firma:</td>
+		<td><input type="text" id="Firma" size="30"></td>
+	</tr>
+	<tr>
+		<td>Abteilung:</td>
+		<td><input type="text" id="Abteilung" size="30"></td>
+	</tr>
+	<tr>
+		<td>Datum:</td>
+		<td><input type="text" id="Datum" size="30"></td>
+	</tr>
+	<tr>
+		<td>Name:</td>
+		<td><input type="text" id="Name" size="30"></td>
+	</tr>
+	</table>
+	</div>
+	<hr>
+	<div id="benutzerAnleitungContainer">
+	<h2 id="anleitungTitle">Benutzeranleitung</h2>
+	<p>Beim Audit handelt es sich um eine Liste von Prüfungskriterien aus verschiedenen Sicherheitsaspekten wie
+	z.B. "Backup", "Awareness" etc. Jedes Prüfungskriterium beschreibt eine Anforderung an die IT-Security ihres
+	Unternehmens. Mit den Bewertungsoptionen geben Sie an, ob eine Anforderung erfüllt ist ("Ja"), teilweise
+	erfüllt ist ("Teilweise") oder nicht erfüllt ist ("Nein", Standardwert). Sie sehen dabei den Grad der Erfüllung 
+	des Sicherheitsaspektes in derselben Zeile wie der Sicherheitseffekt. Die Gesamt-Erfüllung von Ihnen
+	definierten Schutz-Ziele sehen sie in einer Box neben der Liste. Wollen sie die Auswerten des Audits sehen, so
+	können Sie entweder auf das schwarze nach rechtszeigende Dreieck oder den entsprechenden Link klicken.
+	</p>
+	</div>
+	<hr>
+	<div id="auditLinkContainer">
+	<h2 id="auditLinkTitle">Audit Links</h2>
+	<p>Folgen Sie diesen Links um den Audit auszufüllen oder, wenn sie den Audit bereits ausgefüllt haben, um die Auswertung zu betrachten.</p>
+	<table id="auditLinks">
+		<tr>
+			<td></td>
+			<td><a href="audit.html" id="auditLink" class="link">Audit ausfüllen</a></td>
+		
+			<td></td>
+			<td><a href="audit_auswertung.html" id="auswertenLink" class="link">Auswertung Audit</td>
+	</tr>
+	</table>
+	</div>
+    </div>
+    </body>
+</html>

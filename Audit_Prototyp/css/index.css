@@ -1,0 +1,37 @@
+#main {
+    width: 750px;
+    margin: 0px auto;
+}
+    		
+#title {
+	text-align:center;
+}
+    		
+#auditLinkContainer {
+	width:750px;
+	margin-bottom: 20px;
+	
+}
+    		
+#benutzerAnleitungContainer {
+	text-align:justify;
+}
+
+.link:link, .link.active, .link.visited {
+     color: black;
+     text-decoration: none;
+}
+
+.link:hover {
+     background-color: #FFC640;
+     text-decoration: none;
+}
+
+#auditLink {
+	margin-left:215px;
+	margin-right: 50px;
+}
+
+.link {
+    font-size:20px;
+}
