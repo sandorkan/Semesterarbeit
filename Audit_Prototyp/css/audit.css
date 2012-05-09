@@ -1,0 +1,76 @@
+#audit_form {
+     margin: 50px auto;
+     width: 750px;
+}
+
+td {
+	padding: 10px 0px 0px 20px;
+}
+
+#auswertenKnopf {
+	font-size:30px;
+	margin-left: 30px;
+	color:black;
+}
+
+#resetKnopf {
+    font-size:30px;
+    margin-left:50px;
+    color:black;
+}
+
+#indexKnopf {
+    font-size:30px;
+    margin-left:50px;
+    color:black;
+}
+
+#pk_list {
+	margin-bottom: 20px;
+}
+
+.link:link, .link.active, .link.visited {
+     color: black;
+     text-decoration: none;
+}
+
+.link:hover {
+     background-color: #FFC640;
+     text-decoration: none;
+}
+
+.inactive {
+     background-color: white;
+}
+
+.active {
+     background-color: #FFC640;
+}
+
+#totalResult {
+	width : 170px;
+    height: 80px;
+	border : 1px solid black;
+	position : fixed;
+	top : 50px;
+	left: 1040px;
+	font-family: "Courier New";
+	padding-left: 10px;
+	padding-top: 5px;
+}
+
+#backArrow {
+	position:fixed;
+	left : 130px;
+    top : 200px;
+	width : 80px;
+	height : 80px;
+}
+
+#forwardArrow {
+	position:fixed;
+	left : 1055px;
+    top : 200px;
+	width : 80px;
+	height : 80px;
+}
