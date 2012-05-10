@@ -1693,9 +1693,9 @@ a.Audit_Data_0  = {
             
             Personelle_Daten:
             {
-            	Firma:"TestFirma",
-            	Abteilung:"TestAbteilung",
-            	Datum:"TestDatum",
-            	Name:"TestName"
+            	Firma:"",
+            	Abteilung:"",
+            	Datum:"",
+            	Name:""
             }
         }
