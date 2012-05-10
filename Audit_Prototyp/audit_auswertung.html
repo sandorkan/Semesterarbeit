@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Auswertung Audit</title>
+        <link type="text/css" href="css/audit_auswertung.css" rel="Stylesheet" />
+        <script src="js/jquery-1.7.2.min.js"></script>
+		<script src="js/audit_auswertung.js"></script>
+		<script>
+		</script>
+    </head>
+    <body
+    
+	<div id="auswertung">
+		<h1 id="titel">Auswertung Audit</h1>
+		<div id="personalDataContainer">
+	<h1 id="personalDataTitle">Persönliche Daten:</h1>
+	<table id="personalData">
+	<tr>
+		<td class="personalTd">Firma:</td>
+		<td id="Firma" class="personalTd"></td>
+	</tr>
+	<tr>
+		<td class="personalTd">Abteilung:</td>
+		<td id="Abteilung" class="personalTd"></td>
+	</tr>
+	<tr>
+		<td class="personalTd">Datum:</td>
+		<td id="Datum" class="personalTd"></td>
+	</tr>
+	<tr>
+		<td class="personalTd">Name:</td>
+		<td id="Name" class="personalTd"></td>
+	</tr>
+	</table>
+	</div>
+	<hr class = "line">
+
+		<h1 id="total"></h2>
+		<canvas id="audit_canvas" width="700" height="400"></canvas>
+		
+		<img src="img/backArrow.png" id="backArrow">
+	</div>
+	<hr class="line">
+	<div id="details">
+		<h1>Detail-Auswertung:</h1>
+		<table id="detailTable">
+		<tr class="tableHeader">
+			<th>Sicherheitsaspekt</th>
+			<th>Erfüllung-C</th>
+			<th>Erfüllung-I</th>
+			<th>Erfüllung-A</th>
+			<th>Erfüllung-Total</th>
+		</tr>
+		</table>
+    </div>
+    </body>
+</html>

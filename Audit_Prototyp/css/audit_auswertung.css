@@ -1,0 +1,70 @@
+#auswertung {
+     margin : 50px auto;
+     width: 700px;
+}
+
+#titel {
+    text-align : center;
+    margin-top : -25px;
+    font-size: 55px;
+}
+
+#total {
+    text-align : left;
+}
+
+#backArrow {
+	position:fixed;
+	left : 130px;
+    top : 200px;
+	width : 80px;
+	height : 80px;
+}
+
+
+hr.line {
+	margin-top: 40px;
+}
+
+#detailTable {
+	width: 600px;
+	margin: 5px auto;
+	border-collapse:collapse;
+}
+
+th{
+    border-style:solid;
+    border-width:1px;
+    border-color:black;
+    padding:5px;
+    
+
+}
+td {
+    border-style:solid;
+    border-width:1px;
+    text-align: center;
+    padding: 5px;
+    font-size:17px;
+}
+
+td.tdName {
+	text-align: right;
+	width: 200px;
+}
+
+tr.totalData {
+	background-color : red;
+}
+
+#personalData {
+	border-collapse:collapse;
+	text-align: right;
+	margin-left: 30px;
+	width: 250px;
+}
+
+td.personalTd {
+    font-size:20px;
+    text-align: left;
+}
