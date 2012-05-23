@@ -11,7 +11,7 @@ Voraussetzung
 Installation
 -------------
 
-1.	Rechts-Klick auf "Audit_Prototyp.zip"
-2.	Speichere Link unter --> Abspeichern
+1.	Klick auf "Audit_Prototyp.zip"
+2.	"View Raw" --> Abspeichern
 3.	In gewuenschten Ordner entpacken
 4.	Index.html oeffnen
