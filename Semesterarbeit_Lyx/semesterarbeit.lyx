@@ -528,7 +528,7 @@ Mir ist bekannt, dass ich meine Semesterarbeit zusammen mit dieser Erklärung
 
 \begin_layout Standard
 \noindent
-Zürich, den 25.05.2012
+Zürich, den 29.05.2012
 \end_layout
 
 \begin_layout Standard
@@ -833,12 +833,12 @@ Use-Case:
 Use Case
 \shape up
  ist ein Fall (oder Situation), in welchem ein System dazu verwendet wird,
- einen oder mehre gestellte Anforderungen (requirements) zu erfüllen.
+ einen oder mehrere gestellte Anforderungen (requirements) zu erfüllen.
  Ein 
 \shape italic
 Use Case
 \shape up
- beschreibt eine Funktionalität die das System anbietet.
+ beschreibt eine Funktionalität, die das System anbietet.
  (Aus 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -907,7 +907,7 @@ Ziel der Arbeit
 Das Ziel dieser Arbeit ist es, die bereits entwickelte Methode so zu ändern
  bzw.
  anzupassen, dass es möglich ist, Gefahren einer IT-Infrastruktur aufzuzeigen,
- sowie die Programmierung eines webbasierten Prototyps mit dem dies ausgeführt
+ sowie die Programmierung eines webbasierten Prototyps, mit dem dies ausgeführt
  und dargestellt werden kann.
  Die Grösse der Firma, in der diese Methode schlussendlich zum Einsatz kommen
  soll, beschränkt sich vorerst auf KMUs.
@@ -983,7 +983,7 @@ Rahmenbedingungen
 \begin_layout Standard
 
 \shape up
-Zusammengefasst werden folgende Anforderungen an die Methode gestellt:
+Es werden folgende Anforderungen an die Methode gestellt:
 \end_layout
 
 \begin_layout Itemize
@@ -1057,7 +1057,7 @@ Um die Ziele zu erreichen, wird folgendermassen vorgegangen:
 Methodik: 
 \series default
 Beschreibung des methodischen Konzeptes des genannten Ansatzes für ein Brandschu
-tz-Audit samt Risk Assessment.
+tz-Audit.
  Dieses Konzept bildet die Grundlage für die in dieser Semesterarbeit zu
  entwickelnde Methode eines IT-Security-Audits.
  
@@ -1245,7 +1245,7 @@ PK-Gewichtung
 \shape up
 \emph default
 ).
- Es sagt aus, wie wichtig das PK im vergleich zu anderen PKs ist.
+ Es sagt aus, wie wichtig das PK im Vergleich zu anderen PKs ist.
  Auch dieses Attribut erhält einen Wert zwischen 0 und 1.
  Der potentielle Schaden eines Prüfungskriteriums, das mit einer 1 bewertet
  worden ist, ist dabei doppelt so gross wie bei einem Prüfungskriterium,
@@ -1312,7 +1312,7 @@ kleiner Mangel
 In einem ersten Schritt muss eine Liste von Prüfungskriterien erstellt werden,
  in welcher jene Mängel enthalten sind, die in einer Branche besonders häufig
  auftreten.
- Danach müssen die Attribute aller Prüfungskritieren mit Werten hinterlegt
+ Danach müssen die Attribute aller Prüfungskriterien mit Werten hinterlegt
  werden.
  Dieser Teil stellt die Grundlage für die Berechnung des Gefahrenpotentials
  dar und ist daher von elementarer Wichtigkeit.
@@ -1386,10 +1386,6 @@ nicht beurteilbar
 \shape up
 
 \begin_inset Quotes grd
-\end_inset
-
-
-\begin_inset space \space{}
 \end_inset
 
 .
@@ -3185,7 +3181,7 @@ reference "eqn:basis_berechnung"
 
 \shape up
 Diese Berechnung wird für jedes Prüfungskriterium durchgeführt.
- Die Auswertung besteht dann im wesentlichen im aufsummieren dieser Resultate.
+ Die Auswertung besteht dann im Wesentlichen im Aufsummieren dieser Resultate.
  Um die Attribute miteinander vergleichen zu können, wird eine prozentuale
  Erfüllung berechnet, die erst ganz zum Schluss noch mit der 
 \shape italic
@@ -3352,7 +3348,7 @@ key "ISO-27002"
 \shape italic
 Best Practice
 \shape up
--Ansatz angelegt, was dem Sinn der Methode entspricht.
+-Ansatz ausgelegt, was dem Sinn der Methode entspricht.
  In einem ersten Schritt werden aus den in diesen beiden Dokumenten vorkommenden
  Vorschlägen bezüglich IT-Security je eine Liste erstellt.
  Punkte, die in beiden Listen vorkommen, werden als mögliche Prüfungskriterien
@@ -3563,7 +3559,7 @@ Anleitungen, wie die IT-Security einer Firma geschützt bzw.
 \begin_inset Quotes gld
 \end_inset
 
-Trivial
+trivial
 \begin_inset Quotes grd
 \end_inset
 
@@ -3575,7 +3571,7 @@ bis hin zu
 \begin_inset Quotes gld
 \end_inset
 
-Sehr spezifisch
+sehr spezifisch
 \begin_inset Quotes grd
 \end_inset
 
@@ -3631,7 +3627,7 @@ Nach der Durchsicht der beiden Dokumente und der Niederschrift der sich
  darin befindenden Punkte bezüglich IT-Security, hat sich gezeigt, dass
  er ISO 27002 Standard um einiges detaillierter auf die IT-Security-Aspekte
  eingeht als dies der BSI-Leitfaden tut.
- Der BSI Leitfaden enthält eine Untermenge der von im ISO 27002 beschriebenen
+ Der BSI Leitfaden enthält eine Untermenge der im ISO 27002 beschriebenen
  Punkte und drückt diese zumeist verständlicher aus.
  Da bei der Auswahl Punkte gewählt werden, die in beiden Dokumenten vorkommen,
  kann somit hauptsächlich auf Punkte aus dem BSI Leitfaden geachtet werden,
@@ -3735,8 +3731,8 @@ ys.
 Die Studie kommt zum Ergebnis, dass die Entwicklung der IT-Security insgesamt
  eine positive ist.
  Die letzte DsiN-Studie dazu wurde 2008 durchgeführt.
- Zum einen sei die Verantwortung für IT-Security in Unternehmen klarer zugeordne
-t und Sicherheitslösungen wie Firewall, Anti-Virus und Anti-Spam-Lösungen
+ Die Verantwortung für IT-Security in Unternehmen sei klarer zugeordnet
+ und Sicherheitslösungen wie Firewall, Anti-Virus- und Anti-Spam-Lösungen
  inzwischen Standard geworden.
  
 \end_layout
@@ -3780,7 +3776,7 @@ Verwendung von sicherer E-Mail.
 \begin_inset Quotes eld
 \end_inset
 
-Schützen von mobilen Daten
+Schutz von mobilen Daten
 \begin_inset Quotes erd
 \end_inset
 
@@ -3812,7 +3808,7 @@ n, wird jedoch nun hinzugefügt.
  Kommunikation notwendig ist.
  Diese Empfehlung ist ein potentieller Kandidat um auf die Liste der Prüfungskri
 terien zu gelangen.
- Ein weiterer Punkt bei dem Handlungsbedarf zu bestehen scheint, sind die
+ Ein weiterer Punkt, bei dem Handlungsbedarf zu bestehen scheint, sind die
  organisatorischen Massnahmen bezüglich IT-Security.
  Laut Studie haben lediglich 24% der befragten Unternehmen eine dokumentierte
  Sicherheitsrichtlinie, 30% ein von der Geschäftsleitung getragenes Sicherheitsk
@@ -3820,7 +3816,7 @@ onzept und 31% haben gar keine organisatorische Massnahmen definiert.
  Diese Punkte sind bereits in der Liste der Prüfungskriterien erhalten und
  bestätigen deren Relevanz.
  Bei der Definition der Konsequenzen dieser Punkte, kann ihnen jedoch aufgrund
- dieses Befundes eine höhere Wichtigkeit gegeben werden.
+ dieses Befundes eine hoher Wert gegeben werden.
  
 \begin_inset Newline newline
 \end_inset
@@ -3830,13 +3826,11 @@ onzept und 31% haben gar keine organisatorische Massnahmen definiert.
 \end_inset
 
 Der nächste betrachtete Survey hat den Namen 
-\begin_inset Quotes gld
-\end_inset
-
+\shape default
+\emph on
 Global IT Security Risk
-\begin_inset Quotes grd
-\end_inset
-
+\shape up
+\emph default
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -3857,7 +3851,7 @@ key "Kasperski-Global-IT-Security-Risks"
 
 \shape up
 Laut Studie ist die IT-Security-Strategie für einen Grossteil der Unternehmen
- eines der wichtigsten Anliegen, für viele kommt sie noch vor der Finanz-,
+ eines der wichtigsten Anliegen Für viele kommt sie noch vor der Finanz-,
  Marketing- oder Personalstrategie.
  Dies vor allem, weil die Unternehmen bzw.
  deren Geschäftsprozesse ohne IT nicht funktionieren könnten und ein erfolgreich
@@ -3896,7 +3890,7 @@ Zum Schluss gibt Kaspersky Lab folgende 5 Empfehlungen ab:
 \begin_inset Quotes eld
 \end_inset
 
-Wählen Sie eine Sicherheitslösung die zu Ihrem Unternehmen passt.
+Wählen Sie eine Sicherheitslösung, die zu Ihrem Unternehmen passt.
 \begin_inset Quotes erd
 \end_inset
 
@@ -3972,7 +3966,8 @@ key "IT-Sicherheitslage"
  genannt.
  Schadsoftware (Viren, Trojaner etc.) wurde als die gefährlichste externe
  Bedrohung ausgemacht.
- 10% der erfolgreichen Angriffe führten zum Verlust von sensitiven Daten.
+ 10% der erfolgreichen Angriffe führten dabei zum Verlust von sensitiven
+ Daten.
  Ein unternehmensweites Anti-Virus System sollte also Pflicht sein.
  Nichtsdestotrotz gaben 30% aller an der Studie teilnehmenden Unternehmen
  an, über keine bzw.
@@ -4062,9 +4057,9 @@ Dieser sehr interessante Bericht zeigt bei der Auswertung der Resultate
  Interessant sind auch die Treiber / Beweggründe um IT-Security-Massnahmen
  auszubauen.
  Die vier wichtigsten sind: Schutz von Kundeninformationen (28%), Vorbeugung
- von Systemausfällen (19%), Einhaltung von Gesetzten und Vorschriften (13%),
+ von Systemausfällen (19%), Einhaltung von Gesetzen und Vorschriften (13%),
  sowie, um den Ruf der Firma zu schützen (11%).
- Diese Punkte könnten sich als Attribute für die Methode eigenen.
+ Diese Punkte könnten sich als Attribute für die Methode eignen.
  Die Sicherheitskultur in den Firmen, kleinen wie grossen, hat deutlich
  zugenommen.
  Eine dauerhafte Schulung der Mitarbeiter hingegen führt nur knapp die Hälfte
@@ -4072,13 +4067,13 @@ Dieser sehr interessante Bericht zeigt bei der Auswertung der Resultate
  Es wird dargelegt, dass allein durch technische Massnahmen keine Sicherheit
  erlangt werden kann.
  Auch den erheblichen, positiven Einfluss, den die Unterstützung der Geschäftsle
-itung bezüglich IT-Security hat, wird hervorgehoben.
- Der Autor ist der Ansicht, das diese Einsichten auch in der Methode widergespie
-gelt werden sollten, was heisst, dass organisatorischen Massnahmen zur Verbesser
-ung der IT-Security eine hohe Wichtigkeit zuzusprechen ist.
+itung auf die IT-Security hat, wird hervorgehoben.
+ Der Autor ist der Ansicht, dass diese Einsichten auch in der Methode widergespi
+egelt werden sollten, was heisst, dass organisatorischen Massnahmen zur
+ Verbesserung der IT-Security eine hohe Wichtigkeit zuzusprechen ist.
  Ein weiterer wichtiger Punkt ist der Verlust bzw.
  der Diebstahl von Daten.
- Eine Möglichkeit, dem entgegen zu wirken ist der Gebrauch von Verschlüsselung.
+ Eine Möglichkeit, dem entgegen zu wirken, ist der Gebrauch von Verschlüsselung.
  Hier fällt auf, dass vor allem ein grosser Anteil der KMUs zu wenig auf
  Verschlüsselung setzt (Notebook Harddisks 57%, Kundentransaktionen auf
  Firmenwebseite 42%, Smartphones 23%).
@@ -4123,7 +4118,7 @@ key "ISO-27002"
  nicht nur technische, sondern auch, und vor allem, organisatorische Massnahmen
  zählen.
  Die Mitarbeiter spielen hierbei eine tragende Rolle.
- Des weiteren hat der Bericht dabei geholfen, schon jetzt die Konsequenz
+ Des Weiteren hat der Bericht dabei geholfen, schon jetzt die Konsequenz
  einiger Prüfungskriterien besser einschätzen zu können und zeigt mögliche
  Schadensdimensionen (Attribute), wie zum Beispiel die Schädigung des Rufes,
  auf.
@@ -4413,7 +4408,7 @@ Definition der PK-Konsequenzen und PK-Gewichtung
 
 \shape up
 Nachdem die Prüfungskriterien definiert wurden, müssen sie gewichtet werden.
- Es gilt, für jedes Prüfungskriterium die PK-Konsequenz von jedem Attribut
+ Es gilt, für jedes Prüfungskriterium die PK-Konsequenz von jedem Attribut,
  sowie die PK-Gewichtung zu bestimmen.
  Mit der PK-Konsequenz wird ausgedrückt, was für eine Konsequenz ein Mangel
  auf ein bestimmtes Attribut hat.
@@ -4700,11 +4695,11 @@ name "tab:Konsequenz-Klassen"
 
 \shape up
 Im Rahmen dieser Arbeit wird die PK-Konsequenz sowie die PK-Gewichtung aller
- 59 Prüfungskriterien vom Autor bewertet.
+ Prüfungskriterien vom Autor bewertet.
  Mit diesen bewerteten Prüfungskriterien als Grundlage wird im weiteren
  Verlauf der Prototyp sowie dessen Anwendbarkeit getestet und bewertet.
  Die detaillierte List der Prüfungskriterien mit Konsequenz- und Gewichtungswert
-en kann im Anhang
+en kann im Anhang 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Prüfungskriterien-der-Methode"
@@ -4733,7 +4728,8 @@ Zu bestimmen, wie hoch eine mögliche Konsequenz eines Mangels für ein bestimmt
  bei einem Mangel die Vertraulichkeit betroffen, leiden möglicherweise auch
  Verfügbarkeit und Integrität darunter.
  Die Einteilung der PK-Konsequenz-Bewertungen in Klassen, hat bei der Bewertung
- geholfen, der Autor hat sie jedoch viele Male als zu einschränkend wahrgenommen.
+ geholfen.
+ Der Autor hat sie jedoch viele Male als zu einschränkend wahrgenommen.
  Ein weiterer Punkt ist, dass der Autor die meisten Prüfungskriterien als
  
 \begin_inset Quotes gld
@@ -4901,8 +4897,8 @@ Um die Vorstellung, wie der Prototyp aussehen soll zu konkretisieren, werden
  in einem ersten Schritt Mockups erstellt.
  Mockups sind visuelle Darstellungen des Prototyps.
  Sie bilden die Grundlage der Entwicklung.
- In einem ersten Schritt werden daraus die Anforderungen (Requirements),
- die der Prototyp erfüllen soll, definiert.
+ In einem ersten Schritt werden daraus die Anforderungen (Requirements)
+ definiert, die der Prototyp erfüllen soll.
  
 \end_layout
 
@@ -5054,14 +5050,14 @@ Der Benutzer muss auf dieser Seite die Schutzziel-Erfüllung eingeben können.
 
 \begin_layout Enumerate
 Der Benutzer muss diverse persönliche Daten eingeben können.
- Welche genau ist noch nicht genau definiert.
+ Welche genau, ist noch nicht genau definiert.
  Diese persönlichen Daten müssen in der Auswertung des Audits wieder dargestellt
  werden.
 \end_layout
 
 \begin_layout Enumerate
 Auf der Start-Seite muss sich auch eine kurze Anleitung zur Verwendung des
- Audits finden.
+ Audits befinden.
 \end_layout
 
 \begin_layout Enumerate
@@ -5359,7 +5355,7 @@ reference "sec:Vorgehen-Entwicklung-Prototyp"
 
  definierten Grundsätze wird der Prototyp als HTML5-Web-Applikation umgesetzt.
  Jegliche Daten werden auf dem Client gespeichert.
- Einzige Voraussetzung zur Verwendung des Prototyps ist ein somit moderner
+ Einzige Voraussetzung zur Verwendung des Prototyps ist somit ein moderner
  Web-Browser (Tab.
  
 \begin_inset CommandInset ref
@@ -5412,8 +5408,8 @@ JavaScript
 .
  Die gesamte Logik bzw.
  Umsetzung der Methode wird in dieser Sprache programmiert.
- Zur Vereinfachung der Progammierarbeit und Sicherstellung einer hoher Web-Brows
-er-Kompabilität werden für diverse Aufgaben die 
+ Zur Vereinfachung der Programmierarbeit und Sicherstellung einer hoher
+ Web-Browser-Kompatibilität werden für diverse Aufgaben die 
 \emph on
 JQuery
 \begin_inset Foot
@@ -5450,7 +5446,7 @@ http://www.jqueryui.com
 \end_layout
 
 \begin_layout Description
-Darstellung Für die Darstellung der Webseiten wird CSS verwendet.
+Darstellung Für die Darstellung der Webseiten wird HTML und CSS verwendet.
  Um die Auswertung zu zeichnen wird das von HTML5 angebotene 
 \emph on
 Canvas-
@@ -5994,8 +5990,6 @@ https://github.com/sandorkan/Semesterarbeit
 \end_inset
 
  abgelegt.
- Darauf befinden sich auch die Files der Semesterarbeit sowie eine Installations
-anleitung.
 \end_layout
 
 \begin_layout Subsection
@@ -6004,7 +5998,7 @@ Installation
 
 \begin_layout Standard
 Auf dem oben erwähnten github-Repository befindet sich ein Zip-File (Audit_Proto
-typ.zip), welches alle Files enthält, die es zur Verwendung des Prototyps
+typ.zip), welches alle Files enthält, die es für die Verwendung des Prototyps
  braucht.
  Zur Benutzung des Prototyps lädt man sich dieses Zip-File herunter, entpackt
  es und öffnet das 
@@ -6048,14 +6042,14 @@ Dank HTML5 Technologien kommt man ohne Datenbank aus.
 \end_layout
 
 \begin_layout Itemize
-Da zur Benutzung nur einen Web-Browser benötigt wird, ist das Programm betriebss
-ystemunabhängig anwendbar.
+Da zur Benutzung nur ein Web-Browser benötigt wird, ist das Programm betriebssys
+temunabhängig anwendbar.
 \end_layout
 
 \begin_layout Itemize
 Die Lösung bleibt übersichtlich.
  Es muss kein Framework eingesetzt werden.
- Es braucht keinen Web-Server auf welchem die Applikation gehostet wird.
+ Es braucht keinen Web-Server, auf welchem die Applikation gehostet wird.
 \end_layout
 
 \begin_layout Standard
@@ -6133,7 +6127,7 @@ reference "sec:Use-Cases-Detailbeschreibung"
 
 ) überprüft.
  Die Anwendbarkeit wird mit einem komplett durchgeführtem Audit bewertet.
- Dabei wird versucht Stärken und Schwächen des Prototyps bzw.
+ Dabei wird versucht, Stärken und Schwächen des Prototyps bzw.
  der Methode zu finden.
 \end_layout
 
@@ -6345,7 +6339,7 @@ Sicherheitsrichtlinie
 \end_inset
 
 .
- Hat eine Firma keine Sicherheitsrichtlinie, bräuchte man die dazu gehörigen
+ Hat eine Firma keine Sicherheitsrichtlinie, bräuchte man die dazu gehörenden
  Prüfungskriterien eigentlich nicht zu bewerten.
  Man könnte eine Regel definieren die besagt, dass wenn ein Sicherheitsaspekt
  nicht vorhanden ist, alle zum Sicherheitsaspekt gehörenden Prüfungskriterien
@@ -6649,7 +6643,7 @@ Es hat sich gezeigt, dass die von der ZHAW entwickelte Methode generisch
  Die Anwendung von Attributen zur Beschreibung von möglichen Schäden erlaubt
  eine vollständige und akkurate Beschreibung von Gefahren.
  Für die Methode in dieser Arbeit wurden zur Beschreibung eines Schadens
- die klassischen IT-Security-Grundsätze 
+ die klassischen IT-Security-Werte 
 \emph on
 Vertraulichkeit
 \emph default
@@ -6710,14 +6704,14 @@ Es ist keine Sicherheitsrichtlinie vorhanden
 \begin_layout Standard
 Die von der ZHAW entwickelte Methode funktioniert auf einer theoretischen
  Ebenen ohne Probleme.
- Das Grundgerüst der Methode - die Attribute, die Prüfungskritieren sowie
+ Das Grundgerüst der Methode - die Attribute, die Prüfungskriterien sowie
  deren Bewertung - sollte idealerweise in Zusammenarbeit mit mehreren Experten
  erstellt werden.
  Nur so lässt sich sicherstellen, dass die Methode verlässliche und aussagekräft
-ige Resultate generiert.
+ige Resultate liefert.
  Die in dieser Arbeit definierten Prüfungskriterien und Attribute sowie
  deren Bewertung könnte man als anzupassende Start-Menge verwenden.
- Der Prototyp sollte in einem nächsten Schritt in eine auf einem Server
+ Der Prototyp sollte in einem nächsten Schritt in eine, auf einem Server
  laufende Web-Applikation mit einer Datenbank weiterentwickelt werden.
  So wäre die Sammlung und Auswertung mehrerer Audits möglich.
  Dadurch könnte ein Bild der IT-Security-Lage von KMUs gewonnen werden.
@@ -6733,9 +6727,9 @@ Die gesetzten Ziele wurden erreicht.
  definiert.
  Ein funktionierender Prototyp lässt die Methode anwenden.
  Die Arbeit hat sich jedoch als aufwendiger als erwartet herausgestellt.
- Zur zufriedenstellender Anpassung der Methode bräuchte es mehr Zeit als
+ Zur zufriedenstellender Anpassung der Methode bräuchte es mehr Zeit, als
  die für diese Arbeit vorgegebenen 15 Tage.
- So könnten noch mehr Standards und Surveys berücksichtig werden.
+ So könnten noch mehr Standards und Surveys berücksichtigt werden.
  Zusätzlich sollten Experten-Befragungen definiert und durchgeführt werden.
 \end_layout
 
@@ -8799,7 +8793,7 @@ Häufige Versäumnisse
 
 \series bold
 \shape up
-Unzureichende Informationssicherheitstrategie
+Unzureichende Informationssicherheits-Strategie
 \series default
  
 \end_layout
@@ -9111,7 +9105,7 @@ Allen Systembenutzern sollten Rollen und Profile zugeordnet werden
 \begin_layout Enumerate
 
 \shape up
-Administratorrechte sollten auf das erforderliche Maß eingeschränkt werden
+Administratorenrechte sollten auf das erforderliche Maß eingeschränkt werden
  
 \end_layout
 
@@ -9528,7 +9522,16 @@ Organization of information security
 \shape up
 Internal Organization
 \series default
-: To manage information security within the organization
+: To manage information security 
+\shape default
+\lang english
+within
+\shape up
+\lang ngerman
+ the 
+\shape default
+\lang english
+organization
 \end_layout
 
 \begin_layout Enumerate
@@ -11066,7 +11069,7 @@ reference "Tab: PK-Gewichtungsmöglichkeiten"
 
 \series bold
 \shape up
-Sicherheitsrichtlinie
+Organisatorische Sicherheit
 \series default
  
 \end_layout
@@ -15613,8 +15616,8 @@ name "sec:Dateien-/-Dateistruktur"
 Die Files für die Webseiten (HTML) befinden sich im Stammverzeichnis (Root).
  Files für die Darstellung (CSS), Logik und Daten (JavaScript), Bilder sowie
  Tests sind in separaten Ordnern abgelegt.
- In diesem Kapitel soll aufgezeigt werden, aus was für Files der Prototyp
- besteht und was die Aufgabe des jeweiligen Files ist.
+ In diesem Kapitel wird beschrieben, aus was für Files der Prototyp besteht
+ und was die Aufgabe des jeweiligen Files ist.
 \end_layout
 
 \begin_layout Subsection
@@ -15913,7 +15916,7 @@ Bilder des Prototyps
 \end_layout
 
 \begin_layout Standard
-Folgend die Bilder des fertig entwickelten Prototyps
+Folgend die Bilder des fertig entwickelten Prototyps:
 \end_layout
 
 \begin_layout Standard
